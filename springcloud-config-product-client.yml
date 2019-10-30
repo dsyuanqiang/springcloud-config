@@ -41,7 +41,7 @@ info:
 server:
   port: 8081
 spring:
-  profiles: dev
+  profiles: beta
   application:
     name: springcloud-provider-product
   datasource:
