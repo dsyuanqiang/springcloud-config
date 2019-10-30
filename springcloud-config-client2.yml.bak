@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8201
+
+spring:
+  profiles: dev
+  application:
+    name: springcloud-test-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@eureka1:7001/eureka,http://admin:123456@eureka3:7003/eureka
+---
+server:
+  port: 8102
+
+spring:
+  profiles: beta
+  application:
+    name: microconfig-test-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@eureka1:7001/eureka,http://admin:123456@eureka3:7003/eureka
